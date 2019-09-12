@@ -64,6 +64,6 @@ resource "aws_instance" "swarm-worker" {
     }
 
     tags = {
-        Name = "swarm-cluster-worker"
+        Name = "swarm-cluster-worker-${count.index}"
     }
 }
