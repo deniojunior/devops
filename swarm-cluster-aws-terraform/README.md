@@ -40,10 +40,15 @@ region=us-east-1
 sudo apt-get install unzip
 ```
 
+1. Install jq
+```bash
+sudo apt-get install jq
+```
+
 1. Download latest version of the terraform
 
 ```bash
-wget https://releases.hashicorp.com/terraform/0.12.08/terraform_0.12.08_linux_amd64.zip
+wget https://releases.hashicorp.com/terraform/0.12.8/terraform_0.12.8_linux_amd64.zip
 ```
 
 1. Extract the downloaded file archive
