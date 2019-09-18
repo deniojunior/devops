@@ -9,6 +9,8 @@ services:
         limits:
           cpus: "0.1"
           memory: 128M
+      restart_policy:
+        condition: on-failure
     ports:
       - '80:80'
     networks:
@@ -23,6 +25,8 @@ services:
         limits:
           cpus: "0.1"
           memory: 128M
+      restart_policy:
+        condition: on-failure
     networks:
       - frontend
       - backend 
@@ -35,6 +39,8 @@ services:
         limits:
           cpus: "0.1"
           memory: 128M
+      restart_policy:
+        condition: on-failure
     networks:
       - backend
   db:
@@ -46,6 +52,8 @@ services:
         limits:
           cpus: "0.1"
           memory: 128M
+      restart_policy:
+        condition: on-failure
     volumes:
       - type: volume
         source: db-data
@@ -61,6 +69,8 @@ services:
         limits:
           cpus: "0.1"
           memory: 128M
+      restart_policy:
+        condition: on-failure
     ports:
       - '8080:80'
     networks: 
