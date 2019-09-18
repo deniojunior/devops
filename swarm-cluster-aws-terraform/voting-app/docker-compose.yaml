@@ -54,6 +54,12 @@ services:
           memory: 128M
       restart_policy:
         condition: on-failure
+#    secrets:
+#      - psql_user
+#      - psql_pass
+#    environment:
+#      POSTGRES_PASSWORD_FILE: /run/secrets/psql_pass
+#      POSTGRES_USER_FILE: /run/secrets/psql_user
     volumes:
       - type: volume
         source: db-data
@@ -84,3 +90,9 @@ networks:
     driver: overlay
 volumes:
   db-data:
+
+#secrets:
+#  psql_user:
+#    file: ./psql_user.txt
+#  psql_pass:
+#    file: ./psql_pass.txt
